@@ -1,0 +1,41 @@
+<h1>{{klass |uppercase}} is the best</h1>
+<hr>
+
+<input type="submit"  class="btn btn-danger" value="event binding" (click)="showMsg()">
+
+<div [style.backgroundColor]="kolor">
+    div property binding
+</div>
+<input type="text" [(ngModel)]="kolor" >
+{{users}}
+
+<div *ngFor="let u of users">
+    <span *ngIf="u.age>20">
+{{u.id}}
+{{u.name}}
+{{u.age}}
+</span> 
+</div>
+
+<div [ngStyle]="{'backgroundColor':'red'}"> ng style</div>
+<hr>
+<div *ngFor="let u of users">
+    <span *ngIf="u.age>20" [ngStyle]="{'backgroundColor':'red'}">
+{{u.id}}
+{{u.name}}
+{{u.age}}
+</span> 
+ <span *ngIf="u.age<20" [ngStyle]="{'backgroundColor':'green'}">
+{{u.id}}
+{{u.name}}
+{{u.age}}
+</span> 
+</div>
+<hr>
+<div *ngFor="let u of users">
+    <span *ngIf="u.age>20" [ngStyle]="{'backgroundColor':u.age>30 ?'green':'red'}">
+{{u.id}}
+{{u.name}}
+{{u.age}}
+</span> 
+</div>
