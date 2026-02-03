@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
 import { TestComponent } from './test/test.component';
 import { FormsModule } from '@angular/forms';
-import { CouldComponent } from './could/could.component'
+import { CouldComponent } from './could/could.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { LoginComponent } from './login/login.component'
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
     TestComponent,
-    CouldComponent
+    CouldComponent,
+    NotfoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
