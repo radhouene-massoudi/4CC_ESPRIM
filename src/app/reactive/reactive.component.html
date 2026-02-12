@@ -1,0 +1,37 @@
+<label for="">name</label>
+<input type="text" [formControl]="name">
+<label for="">pwd</label>
+<input type="text" [formControl]="pwd">
+<input type="submit" value="send" (click)="showFormControle()">
+<br>
+<h1>form group</h1>
+<form [formGroup]="fg">
+    <label>name</label>
+    <input type="text" formControlName="namefg">
+    <div *ngIf="fg.get('namefg')?.invalid && fg.get('namefg')?.touched">
+       <div *ngIf="fg.get('namefg')?.errors?.['required']">
+required
+       </div>
+       <div *ngIf="fg.get('namefg')?.errors?.['minlength']">
+minlength
+       </div>
+    </div>
+<label>pwd</label>
+  <input type="text" formControlName="pwdfg">
+  <input type="button" value="send" (click)="showFormfg()" [disabled]="fg.invalid">
+</form>
+<h2>f builder</h2>
+<form [formGroup]="fbg">
+    <label>name</label>
+    <input type="text" formControlName="namefb">
+    <div *ngIf="fbg.get('namefb')?.invalid && fbg.get('namefb')?.touched">
+       <div *ngIf="fbg.get('namefb')?.errors?.['required']">
+required
+       </div>
+   
+
+    </div>
+<label>pwd</label>
+  <input type="text" formControlName="pwdfb">
+  <input type="button" value="send" (click)="showValue()" [disabled]="fbg.invalid">
+</form>

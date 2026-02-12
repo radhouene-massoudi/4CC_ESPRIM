@@ -1,0 +1,13 @@
+<div *ngFor="let i of products;let j=index">
+{{i.id}}
+{{i.like}}
+{{i.dislike}}
+{{i.quantity}}
+<input type="submit" value="buy" [disabled]="i.quantity==0" (click)="indexProduct(j)">
+<div *ngIf="i.quantity==0">
+<input type="submit" value="buy" disabled>
+</div>
+<div *ngIf="i.quantity!==0">
+<input type="submit" value="buy" >
+</div>
+</div>

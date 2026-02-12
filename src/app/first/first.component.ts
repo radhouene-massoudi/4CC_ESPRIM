@@ -1,17 +1,20 @@
 import { Component,OnInit } from '@angular/core';
 import { User } from '../model/user';
+import { FirstserviceService } from '../core/service/firstservice.service';
 
 @Component({
   selector: 'app-first',
   templateUrl: './first.component.html',
-  styleUrl: './first.component.css'
+  styleUrl: './first.component.css',
+  providers:[FirstserviceService]
 })
 export class FirstComponent implements OnInit{
-  constructor(){
+  constructor(private s: FirstserviceService){
     console.log('cons')
   }
   ngOnInit(){
 console.log('oninit')
+this.s.showTab()
   }
 klass="esprim"
 showMsg(){
