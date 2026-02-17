@@ -10,6 +10,9 @@ import { AddstudentComponent } from './addstudent/addstudent.component';
 import { ProductComponent } from './product/product.component';
 import { ReactiveComponent } from './reactive/reactive.component';
 import { SigninComponent } from './core/signin/signin.component';
+import { FetchUserComponent } from './core/gestionUser/fetch-user/fetch-user.component';
+import { AddUserComponent } from './core/gestionUser/add-user/add-user.component';
+import { UpdateUserComponent } from './core/gestionUser/update-user/update-user.component';
 
 const routes: Routes = [
   {path:'signin',component:SigninComponent},
@@ -20,6 +23,9 @@ const routes: Routes = [
 {path:'login',component:LoginComponent},
 {path:'test',component:TestComponent},
 {path:'first',component:FirstComponent},
+{path:'fetch',component:FetchUserComponent},
+{path:'updateu/:id',component:UpdateUserComponent},
+{path:'adduser',component:AddUserComponent},
 {path:'student',component:StudentComponent,
 children:[
   {path:'add',component:AddstudentComponent}

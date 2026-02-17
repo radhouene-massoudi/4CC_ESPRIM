@@ -15,7 +15,12 @@ import { AddstudentComponent } from './addstudent/addstudent.component';
 import { UpdatestudentComponent } from './updatestudent/updatestudent.component';
 import { ProductComponent } from './product/product.component';
 import { ReactiveComponent } from './reactive/reactive.component';
-import { SigninComponent } from './core/signin/signin.component'
+import { SigninComponent } from './core/signin/signin.component';
+import { FetchUserComponent } from './core/gestionUser/fetch-user/fetch-user.component';
+import { UpdateUserComponent } from './core/gestionUser/update-user/update-user.component';
+import { AddUserComponent } from './core/gestionUser/add-user/add-user.component';
+import { RemoveUserComponent } from './core/gestionUser/remove-user/remove-user.component'
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,14 +35,19 @@ import { SigninComponent } from './core/signin/signin.component'
     UpdatestudentComponent,
     ProductComponent,
     ReactiveComponent,
-    SigninComponent
+    SigninComponent,
+    FetchUserComponent,
+    UpdateUserComponent,
+    AddUserComponent,
+    RemoveUserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
-
+    ReactiveFormsModule,
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

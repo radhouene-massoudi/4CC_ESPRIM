@@ -1,0 +1,7 @@
+<form [formGroup]="fg">
+<label>name</label>
+<input type="text" formControlName="name">
+<label >pwd</label>
+<input type="text" formControlName="pwd">
+<input type="submit" value="update"[disabled]="fg.invalid" (click)="updateUser()">
+</form>>
