@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, ActivatedRoute } from '@angular/router';
 import { FirstComponent } from './first/first.component';
 import { TestComponent } from './test/test.component';
 import { NotfoundComponent } from './notfound/notfound.component';
@@ -13,6 +13,7 @@ import { SigninComponent } from './core/signin/signin.component';
 import { FetchUserComponent } from './core/gestionUser/fetch-user/fetch-user.component';
 import { AddUserComponent } from './core/gestionUser/add-user/add-user.component';
 import { UpdateUserComponent } from './core/gestionUser/update-user/update-user.component';
+import { GestionevenementModule } from './core/gestionevenement/gestionevenement.module';
 
 const routes: Routes = [
   {path:'signin',component:SigninComponent},
@@ -23,6 +24,7 @@ const routes: Routes = [
 {path:'login',component:LoginComponent},
 {path:'test',component:TestComponent},
 {path:'first',component:FirstComponent},
+{path:'event', loadChildren:() =>import('./core/gestionevenement/gestionevenement.module').then((m) => m.GestionevenementModule)},
 {path:'fetch',component:FetchUserComponent},
 {path:'updateu/:id',component:UpdateUserComponent},
 {path:'adduser',component:AddUserComponent},

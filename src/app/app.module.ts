@@ -21,6 +21,7 @@ import { UpdateUserComponent } from './core/gestionUser/update-user/update-user.
 import { AddUserComponent } from './core/gestionUser/add-user/add-user.component';
 import { RemoveUserComponent } from './core/gestionUser/remove-user/remove-user.component'
 import { HttpClientModule } from '@angular/common/http';
+import { GestionevenementModule } from './core/gestionevenement/gestionevenement.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +48,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    GestionevenementModule,
     
   ],
   providers: [],
